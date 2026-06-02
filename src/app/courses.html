@@ -1,0 +1,22 @@
+<main class="landing">
+  <section id="cursos" class="carousel-section">
+    <div class="section-head">
+      <span class="eyebrow">PROGRAMAS DESTACADOS</span>
+      <h2>Cursos disponibles</h2>
+      <p>Elige tu ritmo y descubre los programas que impulsan a nuestros alumnos.</p>
+    </div>
+
+    <div class="courses-grid">
+      <article class="course-card" *ngFor="let course of slides">
+        <span class="course-badge">{{ course.badge }}</span>
+        <h3>{{ course.title }}</h3>
+        <p>{{ course.subtitle }}</p>
+        <div class="course-info">
+          <span>{{ course.duration }}</span>
+          <span>{{ course.level }}</span>
+        </div>
+        <a class="card-cta" routerLink="/contacto">Inscríbete</a>
+      </article>
+    </div>
+  </section>
+</main>

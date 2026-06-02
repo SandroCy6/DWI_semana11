@@ -1,0 +1,108 @@
+<div class="contact-page">
+  <main class="content">
+    <section class="left">
+      <h1>CONTÁCTANOS</h1>
+      <p>
+        Completa el formulario y nos pondremos en contacto contigo. Este diseño es una base visual
+        separada para tu proyecto.
+      </p>
+
+      <label class="check">
+        <input type="checkbox" [formControl]="form.controls.acepta" />
+        <span>Acepto Términos y Condiciones</span>
+      </label>
+
+      <form class="form-grid" [formGroup]="form" (ngSubmit)="enviar()">
+        <div class="field">
+          <input type="text" formControlName="nombres" placeholder=" " />
+          <label>NOMBRES</label>
+        </div>
+
+        <div class="field">
+          <input type="text" formControlName="celular" placeholder=" " />
+          <label>CELULAR</label>
+        </div>
+
+        <div class="field">
+          <input type="text" formControlName="apellidos" placeholder=" " />
+          <label>APELLIDOS</label>
+        </div>
+
+        <div class="field">
+          <input type="email" formControlName="correo" placeholder=" " />
+          <label>CORREO ELECTRÓNICO</label>
+        </div>
+
+        <div class="field">
+          <input type="text" formControlName="dni" placeholder=" " />
+          <label>DNI</label>
+        </div>
+
+        <div class="field select">
+          <select formControlName="ciclo">
+            <option value="">CICLO</option>
+            <option>CEPRUNI</option>
+            <option>PRE</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <input type="date" formControlName="fechaNacimiento" placeholder=" " />
+          <label>FECHA DE NACIMIENTO</label>
+        </div>
+
+        <div class="field select">
+          <select formControlName="sedeInteres">
+            <option value="">SEDE DE INTERÉS</option>
+            <option>Ica</option>
+            <option>Lima</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <input type="text" formControlName="telefonoFijo" placeholder=" " />
+          <label>TELÉFONO FIJO</label>
+        </div>
+
+        <div class="field select">
+          <select formControlName="comoSeEntero">
+            <option value="">¿CÓMO SE ENTERÓ DE NOSOTROS?</option>
+            <option>Facebook</option>
+            <option>Amigo</option>
+          </select>
+        </div>
+
+        <button class="submit-btn" type="submit">ENVIAR</button>
+      </form>
+
+      <div class="toast" *ngIf="mostrarMensaje">
+        {{ mensaje }}
+      </div>
+    </section>
+
+    <aside class="right">
+      <h2>INFORMES</h2>
+      <p>
+        Si deseas conocer información de nuestros ciclos o servicios comunícate a nuestro número.
+      </p>
+      <p class="small">CENTRAL TELEFÓNICA</p>
+      <p><strong>Teléfono:</strong> 01 480 0048</p>
+
+      <div class="claims">LIBRO DE RECLAMACIONES</div>
+    </aside>
+  </main>
+
+  <div class="floating phone">
+    <a href="tel:+51999999999" aria-label="Llamar al celular">☎</a>
+  </div>
+
+  <div class="floating whatsapp">
+    <a
+      href="https://wa.me/51988888888?text=Hola%20quiero%20informaci%C3%B3n%20del%20contacto"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Escribir por WhatsApp"
+      >✆</a
+    >
+  </div>
+</div>
