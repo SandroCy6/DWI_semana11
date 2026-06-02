@@ -1,0 +1,215 @@
+:host {
+  display: block;
+}
+
+.contact-page {
+  min-height: 100vh;
+  background: #0d6ea8;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+  height: 92px;
+  background: #2ea0df;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.menu {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.menu .btn {
+  background: #344c9d;
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+.menu .active {
+  text-decoration: underline;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.left h1,
+.right h2 {
+  font-size: 34px;
+  margin: 0 0 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.left p {
+  line-height: 1.7;
+  max-width: 860px;
+  margin-bottom: 18px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0;
+  font-weight: 600;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 34px;
+}
+
+.field {
+  position: relative;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  background: transparent;
+  color: white;
+  padding: 14px 6px 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.field label {
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+.field select {
+  appearance: none;
+  padding-top: 18px;
+}
+
+.submit-btn {
+  margin-top: 28px;
+  background: #e9e4df;
+  color: #245d86;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 800;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%, 0 20%);
+  cursor: pointer;
+}
+
+.right {
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  padding-left: 28px;
+}
+
+.right p {
+  line-height: 1.6;
+}
+
+.small {
+  margin-top: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.claims {
+  margin-top: 44px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.floating {
+  position: fixed;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.floating a {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  font-size: 24px;
+}
+.phone {
+  bottom: 140px;
+  background: #fff;
+}
+.phone a {
+  color: #222;
+}
+.whatsapp {
+  bottom: 50px;
+  background: #1bd741;
+}
+.whatsapp a {
+  color: #fff;
+}
+.toast {
+  margin-top: 18px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #fff;
+  width: fit-content;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    padding-top: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    height: auto;
+    padding: 18px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
