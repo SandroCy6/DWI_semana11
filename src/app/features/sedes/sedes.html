@@ -1,0 +1,18 @@
+<div class="sedes-page">
+  <h1>Sedes</h1>
+  <p>Aquí podrás ver todas nuestras sedes.</p>
+
+  <div class="grid">
+    <div class="card" *ngFor="let sede of sedes">
+      <div class="image-wrap">
+        <img [src]="sede.imagen" [alt]="sede.nombre" />
+        <div class="overlay">
+          <h3>{{ sede.nombre }}</h3>
+          <p>{{ sede.direccion }}</p>
+          <a [href]="sede.maps" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+        </div>
+      </div>
+      <h2>{{ sede.nombre }}</h2>
+    </div>
+  </div>
+</div>
