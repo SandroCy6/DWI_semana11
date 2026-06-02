@@ -1,0 +1,48 @@
+<main class="landing">
+  <section id="gallery" class="image-carousel-section">
+    <div class="carousel-container">
+      <button class="carousel-nav left" (click)="prevSlide()" aria-label="Imagen anterior">‹</button>
+      <div class="carousel-track">
+        <figure
+          *ngFor="let img of slideImages; index as i"
+          class="carousel-image"
+          [class.active]="currentSlide() === i"
+        >
+          <img [src]="img.src" [alt]="img.alt" />
+        </figure>
+      </div>
+      <button class="carousel-nav right" (click)="nextSlide()" aria-label="Siguiente imagen">›</button>
+    </div>
+    <div class="carousel-dots">
+      <button
+        *ngFor="let img of slideImages; index as i"
+        [class.active]="currentSlide() === i"
+        (click)="setSlide(i)"
+        aria-label="Seleccionar imagen {{ i + 1 }}"
+      ></button>
+    </div>
+  </section>
+
+  <section class="hero-panel">
+    <div class="hero-copy">
+      <p class="eyebrow">Formación en desarrollo web</p>
+      <h1>Tu carrera en tecnología comienza en la Academia DWI</h1>
+      <div class="hero-actions">
+        <a class="btn btn-primary" routerLink="/cursos">Ver cursos</a>
+        <a class="btn btn-secondary" href="#contacto">Contáctanos</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <span class="card-label">Admisión marzo 2026</span>
+      <h2>1er puesto</h2>
+      <p>Ingeniería de Sistemas</p>
+      <div class="card-footer">
+        <div>
+          <span>RUBÉN URSUA RAMOS</span>
+          <small>Estudiante destacado</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
